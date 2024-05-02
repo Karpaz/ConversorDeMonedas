@@ -31,16 +31,16 @@ public class ConectarConAPI {
         PedirDatos miPedirDatos = gson.fromJson(json, PedirDatos.class);
 
         Scanner teclado = new Scanner(System.in);               //capturamos por teclado el monto a convertir y lo transformamos a float
-        System.out.println("Ingrese el monto a convertir: ");
+        System.out.println("Ingrese el Monto a Convertir: ");
         float montoAConvertir = teclado.nextFloat();
         float tipoDeCambio = Float.parseFloat(miPedirDatos.conversion_rate);    //tomamos del json el tipo de cambio y lo convertimos a float
         float montoConvertido = montoAConvertir * tipoDeCambio;
 
 
-        System.out.println("La moneda 1 es: "+miPedirDatos.base_code);
-        System.out.println("La moneda 2 es: "+miPedirDatos.target_code);
-        System.out.println("El tipo de cambio es: "+miPedirDatos.conversion_rate);
-        System.out.println("Su monto convertido: "+montoConvertido);
+        System.out.println("La Primera Moneda es: "+miPedirDatos.base_code);
+        System.out.println("La Segunda Moneda es: "+miPedirDatos.target_code);
+        System.out.println("El Tipo de Cambio es: "+miPedirDatos.conversion_rate);
+        System.out.println("El Monto Convertido es: "+montoConvertido);
     }
 
 

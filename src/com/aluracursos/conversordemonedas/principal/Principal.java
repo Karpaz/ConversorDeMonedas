@@ -48,7 +48,6 @@ public class Principal{
                     ConectarConAPI conectarConAPI6 = new ConectarConAPI("COP", "USD");
                     break;
                 case 7:
-                    //getCurrenciesListAndConvert();
                     Scanner entrada2 = new Scanner(System.in);
                     int opcion2;
                     while (true) {
@@ -68,7 +67,7 @@ public class Principal{
                                 // mostrar lista en pantalla
                                 try {
                                     String[] codigoDeMoneda = getCodigoDeMoneda();
-                                    System.out.println("Lista de códigos de moneda:");
+                                    System.out.println("Lista de Otras Monedas Disponibles:");
                                     for (String codigo : codigoDeMoneda) {
                                         System.out.println(codigo);
                                     }
@@ -78,10 +77,10 @@ public class Principal{
                                 continue;
                             case 2:
                                 // conversion de otras monedas
-                                System.out.println("Ingrese la primera moneda: ");
+                                System.out.println("Ingrese la Primera Moneda: ");
                                 Scanner ingreso = new Scanner(System.in);
                                 String monedaUno = ingreso.nextLine();
-                                System.out.println("Ingrese la segunda moneda: ");
+                                System.out.println("Ingrese la Segunda Moneda: ");
                                 Scanner ingreso2 = new Scanner(System.in);
                                 String monedaDos = ingreso2.nextLine();
                                 ConectarConAPI conectarConAPI7 = new ConectarConAPI(monedaUno, monedaDos);
